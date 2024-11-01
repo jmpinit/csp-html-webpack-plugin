@@ -313,8 +313,6 @@ class CspHtmlWebpackPlugin {
    */
   processCsp(compilation, htmlPluginData, compileCb) {
     const $ = cheerio.load(htmlPluginData.html, {
-      decodeEntities: false,
-      _useHtmlParser2: true,
       xmlMode: get(htmlPluginData, 'plugin.options.xhtml', false),
     });
 
